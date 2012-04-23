@@ -1,0 +1,16 @@
+{% extends 'edit_base.html' %}
+{% block title %}Edit Snippet - {{ slug }}{% endblock title %}
+{% block content %}
+	{% if snippet %}
+	<form class="modal" id="edit-snippet" action="/snippets/edit-snippet/{{ snippet.slug }}/{{ mode }}" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="postback" value="1" />
+		<input type="hidden" name="slug" id="slug" value="{{ snippet.slug }}" />
+		<div class="field">
+			<label>HTML</label>
+			<textarea rows="5" cols="60" name="snippet_html" id="snippet-html">{{ snippet.html }}</textarea>
+		</div>
+		<input type="submit" value="save" />
+	</form>
+	{% endif %}
+{% endblock content %}
