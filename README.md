@@ -35,3 +35,7 @@ Then add a tag in the following format:-
 
 The "slug" (the part in quotes above needs) to be in a suitable format to form part of a URL, so use 
 letters, numbers and hyphens (no spaces or other special characters that would break a URL)
+
+For "Front end editing", include the javascript plugin by linking the /snippets/static/js/snippets.js file into the HTML. You'll also then need to enable the snippet urls, by including the following line in your urls.py:-
+
+```(r'', include('snippets.urls')),```
