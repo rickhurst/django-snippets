@@ -6,7 +6,7 @@
 	jQuery.fn.snippetPopUps = function () {
 		var self = this;
 		self.find('.snippet').each(function(){
-			var url = 'snippets/edit-snippet/' + $(this).attr('data-slug') + '/popup/';
+			var url = '/snippets/edit-snippet/' + $(this).attr('data-slug') + '/popup/';
 			$(this).find('a:first').click(function(e){
 				centeredPopUp(url, 'snippet', 600, 400, 'location=no');
 				e.preventDefault();
