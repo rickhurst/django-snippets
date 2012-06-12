@@ -38,7 +38,7 @@ letters, numbers and hyphens (no spaces or other special characters that would b
 
 For "Front end editing", include the javascript plugin by linking the file:-
 
-```/snippets/static/js/snippets.js```
+``` /snippets/static/js/snippets.js ```
 
 into the HTML. This is a jquery plugin, so you'll need the jquery library included too.
 
